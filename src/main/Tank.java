@@ -28,16 +28,10 @@ public class Tank {
         this.howManyLiquid = howManyLiquid;
     }
 
-    public void displayTankInfo{
+    public void displayTankInfo(){
         System.out.println("The tank " + numberTank + " has a capacity of " + howManyVolume + " L and contains " + howManyLiquid + " L of fluid" );
-    }
+    }}
 
 
 
 
-
-
-
-
-
-}
