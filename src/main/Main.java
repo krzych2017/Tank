@@ -3,6 +3,37 @@ package main;
 public class Main {
 
     public static void main(String[] args) {
-	// write your code here
+
+        boolean shouldContinue = true;
+        Program program = new Program();
+
+        while (shouldContinue){
+            System.out.println("________________________________________");
+            System.out.println("|Entry a value:                         |");
+            System.out.println("|1. Add new tank                        |");
+            System.out.println("|2. Add fluid to the tank               |");
+            System.out.println("|3. Pour out of the tank                |");
+            System.out.println("|4. Transfer fluid with tank to the tank|");
+            System.out.println("|5. Edit size the tank                  |");
+            System.out.println("|6. Delete tank                         |");
+            System.out.println("|7. Display all tank                    |");
+            System.out.println("|8. Find tank .... (submenu)            |");
+            System.out.println("|0. Quit                                |");
+            System.out.println("|_______________________________________|");
+
+            int choice = CheckValue.getIntValue();
+            switch (choice){
+                //case 1 ->
+                //case 2 ->
+                //case 3 ->
+                //case 4 ->
+                //case 5 ->
+                //case 6 ->
+                //case 7 ->
+                //case 8 ->
+                //case 0 ->
+
+            }
+        }
     }
 }
