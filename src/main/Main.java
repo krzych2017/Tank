@@ -23,13 +23,13 @@ public class Main {
 
             int choice = CheckValue.getIntValue();
             switch (choice){
-                case 1 ->program.addTank();
-                //case 2 ->
+                case 1 -> program.addTank();
+                case 2 -> program.addFluidTank();
                 //case 3 ->
                 //case 4 ->
                 //case 5 ->
                 //case 6 ->
-                case 7 ->program.displayTank();
+                case 7 -> program.displayTank();
                 //case 8 ->
                 //case 0 ->
 
