@@ -59,4 +59,27 @@ public class Program {
                         System.out.println(" too much !!!");
             }
     }
+    public void pourOut (){
+
+        double pourOutliquid;
+
+        System.out.println("Select the tank number: ");
+        int number = CheckValue.getIntValue();
+        Tank tank = numbersTank.get(number);
+
+        if(tank==null)
+            System.out.println("Bad select");
+
+            else {
+            System.out.println("You can pour out maximal " + tank.getHowManyLiquid() + " Liters with the tank nr " + number);
+            System.out.println("how much do you want to pour ?");
+            pourOutliquid = CheckValue.getDoubleValue();
+            if (pourOutliquid >= tank.getHowManyLiquid())
+                System.out.println("Do you want too much pour out!!");
+            else{
+                tank.setHowManyLiquid(tank.getHowManyLiquid()-pourOutliquid);
+                }
+        }
+
+    }
 }

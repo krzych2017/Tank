@@ -25,7 +25,7 @@ public class Main {
             switch (choice){
                 case 1 -> program.addTank();
                 case 2 -> program.addFluidTank();
-                //case 3 ->
+                case 3 -> program.pourOut();
                 //case 4 ->
                 //case 5 ->
                 //case 6 ->
