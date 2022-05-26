@@ -119,4 +119,22 @@ public class Program {
             }
 
     }
+    public void editTank (){
+        System.out.println("Which tank do you want edit ? ");
+        int numberEdit = CheckValue.getIntValue();
+        Tank tank = numbersTank.get(numberEdit);
+        if(tank == null)
+            System.out.println("Bad value ");
+        else
+            System.out.println("New size of tank (liter): ");
+            double newVolume = CheckValue.getDoubleValue();
+            tank.setHowManyVolume(newVolume);
+            System.out.println("Enter the amount of liquid of the tank");
+            double newLiquid = CheckValue.getDoubleValue();
+            if (newVolume >= newLiquid)
+                tank.setHowManyLiquid(newLiquid);
+            else
+                System.out.println("Bad value ");
+
+    }
 }
