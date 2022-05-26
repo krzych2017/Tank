@@ -1,10 +1,10 @@
 package main;
 
 
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
+import java.sql.Array;
+import java.util.*;
+import java.util.stream.Collectors;
+import java.util.stream.IntStream;
 
 public class Program {
 
@@ -135,6 +135,16 @@ public class Program {
                 tank.setHowManyLiquid(newLiquid);
             else
                 System.out.println("Bad value ");
+
+    }
+    public void deleteTank(){
+        System.out.println("Which tank do you want to delete ?? ");
+        int deleteTank = CheckValue.getIntValue()-1;
+        Tank tank=numbersTank.get(deleteTank);
+        if(tank ==null)
+            System.out.println("Bad value");
+        else
+        tanks.remove(deleteTank);
 
     }
 }

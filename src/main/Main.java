@@ -28,7 +28,7 @@ public class Main {
                 case 3 -> program.pourOut();
                 case 4 -> program.transfer();
                 case 5 -> program.editTank();
-                //case 6 ->
+                case 6 -> program.deleteTank();
                 case 7 -> program.displayTank();
                 //case 8 ->
                 //case 0 ->
