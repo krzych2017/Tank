@@ -26,7 +26,7 @@ public class Main {
                 case 1 -> program.addTank();
                 case 2 -> program.addFluidTank();
                 case 3 -> program.pourOut();
-                //case 4 ->
+                case 4 -> program.transfer();
                 //case 5 ->
                 //case 6 ->
                 case 7 -> program.displayTank();

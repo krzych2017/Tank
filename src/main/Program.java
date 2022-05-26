@@ -82,4 +82,41 @@ public class Program {
         }
 
     }
+    public void transfer(){
+        System.out.println("Enter the number of the tank you want to pour the liquid out of");
+        int numberTankPourOut = CheckValue.getIntValue();
+        Tank tank = numbersTank.get(numberTankPourOut);
+        System.out.println("Enter the number of the tank you want to pour the liquid into");
+        int numberTankPourIn = CheckValue.getIntValue();
+        Tank tank2 = numbersTank.get(numberTankPourIn);
+        if(tank == null && tank2 == null)
+            System.out.println("Bad tank number !!");
+
+            else{
+
+                    double differencePourOutMax = tank.getHowManyLiquid();
+                    double differencePourInMax = tank2.getHowManyVolume()-tank2.getHowManyLiquid();
+                    double transferFluid;
+                    double howMuchTransfer;
+
+                         if(differencePourInMax >= differencePourOutMax)
+                             transferFluid = differencePourOutMax;
+                         else
+                             transferFluid = differencePourInMax;
+
+                    System.out.println("You can max pour out " + differencePourOutMax + " Liters of the tank " + numberTankPourOut);
+                    System.out.println("You can max pour in " + differencePourInMax + "Liters of the tank " + numberTankPourIn);
+                    System.out.println("You can max transfer " + transferFluid);
+                    System.out.println("Enter how much you want to transfer ");
+                    howMuchTransfer = CheckValue.getDoubleValue();
+
+                    if (howMuchTransfer > transferFluid)
+                        System.out.println("Bad value!!");
+                    else{
+                        tank.setHowManyLiquid(tank.getHowManyLiquid()-howMuchTransfer);
+                        tank2.setHowManyLiquid(tank2.getHowManyLiquid()+howMuchTransfer);
+                    }
+            }
+
+    }
 }
